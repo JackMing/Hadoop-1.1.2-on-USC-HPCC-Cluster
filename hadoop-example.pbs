@@ -19,6 +19,7 @@ if [ $? -eq 0 ]; then
   cd $WORK_HOME
 
   # start the wordcount job
+  hadoop dfs -mkdir -p /user/hduser/wordcount
   hadoop dfs -copyFromLocal pg20417.txt /user/hduser/wordcount/pg20417.txt
   hadoop dfs -ls /user/hduser/wordcount
   hadoop jar /usr/usc/hadoop/1.1.2/hadoop-examples-1.1.2.jar wordcount /user/hduser/wordcount /user/hduser/wordcount-output
