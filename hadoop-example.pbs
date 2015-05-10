@@ -1,6 +1,5 @@
 # !/bin/bash
 # Hadoop HPCC Cluster Test Job
-#PBS -k eo
 #PBS -j eo
 #PBS -l walltime=00:30:00
 #PBS -l nodes=3:ppn=6
@@ -12,8 +11,8 @@ echo $(date) - HADOOP PBS Job Started
 
 source $WORK_HOME/setup.sh
 
-# This starts the job and task trackers
-$WORK_HOME/setup-and-start-hadoop-on-hpcc
+# This starts HDFS and the job and task trackers
+$WORK_HOME/launch-up-hadoop-on-hpcc
 
 # Check to make sure hadoop started up before running our code.
 if [ $? -eq 0 ]; then
