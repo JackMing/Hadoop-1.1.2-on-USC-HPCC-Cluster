@@ -7,7 +7,7 @@ This project is meant to suppport Hadoop-1.1.2 on USC HPCC clusters. The current
 
             git clone https://github.com/JackMing/Hadoop-1.1.2-on-USC-HPCC-Cluster.git
 
-2. In `setup-and-start-hadoop-on-hpcc`, change line 8 `HADOOP_TEMPLATE_DIR` to your working directory, specifically where your conf/ folder is.
+2. In `launch-up-hadoop-on-hpcc`, change line 8 `HADOOP_TEMPLATE_DIR` to your working directory, specifically where your conf/ folder is.
 
             HADOOP_TEMPLATE_DIR=${HADOOP_TEMPLATE_DIR:-/path/to/configuration/template/dir/}
 
@@ -18,7 +18,7 @@ This project is meant to suppport Hadoop-1.1.2 on USC HPCC clusters. The current
 4. Before you start your hadoop program, you should run the following setup commands first to launch up the HDFS.
 
             source setup.sh
-            ./setup-and-start-hadoop-on-hpcc
+            ./launch-up-hadoop-on-hpcc
 
 5. After the setup, you can submit your hadoop job as you want. You can also manage the HDFS by the command `hdfs`
 
@@ -36,7 +36,7 @@ This project is meant to suppport Hadoop-1.1.2 on USC HPCC clusters. The current
 
 2. In PBS script `hadoop-example.pbs`, modify your WORK_HOME path. 
 3. The current PBS script will run the hadoop example (wordcount). If you want to run other examples, modify the corresponding paths.
-4. In `setup-and-start-hadoop-on-hpcc`, change line 8 `HADOOP_TEMPLATE_DIR` to your working directory, specifically where your conf/ folder is.
+4. In `launch-up-hadoop-on-hpcc`, change line 8 `HADOOP_TEMPLATE_DIR` to your working directory, specifically where your conf/ folder is.
 
             HADOOP_TEMPLATE_DIR=${HADOOP_TEMPLATE_DIR:-/path/to/configuration/template/dir/} 
 
