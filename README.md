@@ -18,7 +18,7 @@ This project is meant to suppport Hadoop-1.1.2 on USC HPCC clusters. The current
 4. Before you start your hadoop program, you should run the following setup commands first to launch up the HDFS.
 
             source setup.sh
-            setup-and-start-hadoop-on-hpcc
+            ./setup-and-start-hadoop-on-hpcc
 
 5. After the setup, you can submit your hadoop job as you want. You can also manage the HDFS by the command `hdfs`
 
